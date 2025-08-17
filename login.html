@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6dd5fa, #2980b9);
+      font-family: "Poppins", sans-serif;
+    }
+    .login-container {
+      width: 350px;
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      text-shadow: 0 0 10px #fff, 0 0 20px #6dd5fa;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      font-size: 16px;
+      color: #333;
+      background: rgba(255, 255, 255, 0.8);
+      transition: 0.3s;
+    }
+    .login-container input:focus {
+      box-shadow: 0 0 10px #6dd5fa, 0 0 20px #2980b9;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #6dd5fa, #2980b9);
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+    .login-container button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #6dd5fa, 0 0 25px #2980b9;
+    }
+    .login-container p {
+      margin-top: 15px;
+    }
+    .login-container a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>New user? <a href="register.html">Register</a></p>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const storedUser = localStorage.getItem("username");
+      const storedPass = localStorage.getItem("password");
+
+      if(!storedUser || !storedPass){
+        alert("⚠️ No account found. Please register first.");
+        window.location.href = "register.html";
+      }
+      else if(username === storedUser && password === storedPass){
+        alert("✅ Login Successful!");
+        sessionStorage.setItem("user", username);
+        window.location.href = "index.html";
+      }
+      else {
+        alert("❌ Invalid Username or Password");
+      }
+    });
+  </script>
+</body>
+</html>

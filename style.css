@@ -442,3 +442,37 @@ section {
   background: rgba(0,0,0,0.5);
   color: white;
 }
+  .location {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    gap: 8px;
+  }
+
+  .location i {
+    color: #e74c3c;
+    font-size: 18px;
+  }
+
+  #locationSelect {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #locationSelect:hover {
+    border-color: #2980b9;
+    box-shadow: 0 0 6px rgba(41, 128, 185, 0.5);
+  }
+
+  #locationSelect:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.7);
+  }

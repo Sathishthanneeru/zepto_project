@@ -86,3 +86,41 @@ document
 document
   .querySelector(".coffee-next")
   .addEventListener("click", () => moveCoffeeSlide(1));
+  // Check if user is logged in (session)
+  const user = sessionStorage.getItem("user");
+  const authLink = document.getElementById("authLink");
+
+  if(user){
+    // If logged in → show logout icon
+    authLink.innerHTML = `<i class="fas fa-sign-out-alt"></i>`;
+    authLink.href = "#"; // prevent navigation
+
+    authLink.addEventListener("click", function(e){
+      e.preventDefault();
+      sessionStorage.removeItem("user"); // clear session
+      alert("👋 Logged out successfully");
+      window.location.reload(); // reload navbar
+    });
+  } else {
+    // If not logged in → show login icon
+    authLink.innerHTML = `<i class="fas fa-user"></i>`;
+    authLink.href = "login.html"; 
+  }
+
+    const locationSelect = document.getElementById("locationSelect");
+
+  // Load saved location from localStorage
+  const savedLocation = localStorage.getItem("selectedLocation");
+  if(savedLocation){
+    locationSelect.value = savedLocation;
+  }
+
+  // When user selects a location
+  locationSelect.addEventListener("change", function(){
+    const selected = this.value;
+    if(selected){
+      localStorage.setItem("selectedLocation", selected);
+      location.reload(); // Refresh page
+    }
+  });
+  
