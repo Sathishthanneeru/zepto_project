@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zepto Navbar Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">zepto</div>
+
+      <div class="location">
+        <i class="fas fa-map-marker-alt"></i> Select Location ▼
+      </div>
+
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder='Search for "amul butter"'
+        />
+      </div>
+
+      <div class="icons">
+        <div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+        <i class="fas fa-user"></i> Login
+        <i class="fas fa-shopping-cart"></i> Cart
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories" id="categoryList">
+      <div class="category active"><i class="fas fa-shopping-bag"></i> All</div>
+      <div class="category"><i class="fas fa-coffee"></i> Cafe</div>
+      <div class="category"><i class="fas fa-home"></i> Home</div>
+      <div class="category"><i class="fas fa-gamepad"></i> Toys</div>
+      <div class="category"><i class="fas fa-apple-alt"></i> Fresh</div>
+      <div class="category"><i class="fas fa-headphones"></i> Electronics</div>
+      <div class="category"><i class="fas fa-mobile-alt"></i> Mobiles</div>
+      <div class="category"><i class="fas fa-flask"></i> Beauty</div>
+      <div class="category"><i class="fas fa-tshirt"></i> Fashion</div>
+    </div>
+    <!-- Navbar comes here -->
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+      <div class="carousel-container">
+        <button class="prev">&#10094;</button>
+        <div class="carousel">
+          <div class="carousel-item">
+            <img
+              src="https://t3.ftcdn.net/jpg/01/47/51/60/360_F_147516063_hCXI8VUIdBYud0B0hhS3Yo5CFTT1a4g8.jpg"
+              alt="Fruits & Vegetables"
+            />
+            <p>Fruits & Vegetables</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://www.shutterstock.com/image-photo/beanspulseslentilsrice-wheat-grains-bowl-260nw-746324917.jpg"
+              alt="Atta Rice Oil"
+            />
+            <p>Atta, Rice, Oil & Dals</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://haribadairyfarm.com/cdn/shop/files/IMG_4161.jpg?v=1711542634"
+              alt="Masala"
+            />
+            <p>Masala & Dry Fruits</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.zeptonow.com/production/tr:w-640,ar-4615-4615,pr-true,f-auto,q-80/cms/product_variant/3d3c7b5f-5c45-477d-9706-0ef2cf64d7e0.jpeg"
+              alt="Zepto Cafe"
+            />
+            <p>Zepto Cafe</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwtPIr9QFmRGFVdarr-Inf_hZsdDoJCWDMtw&s"
+              alt="Sweet Cravings"
+            />
+            <p>Sweet Cravings</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.zeptonow.com/production/cms/category/8d4fb022-bae0-432d-92c8-2b12d97ee6cc.png"
+              alt="Sweet Cravings"
+            />
+            <p>Sweet Cravings</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.zeptonow.com/production/cms/category/498eea73-358c-42c1-b482-158e80669be9.png"
+              alt="Sweet Cravings"
+            />
+            <p>Sweet Cravings</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.zeptonow.com/production/cms/category/20d9687b-58a4-4bf7-a561-99198b4d5ca1.png"
+              alt="Sweet Cravings"
+            />
+            <p>Sweet Cravings</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.zeptonow.com/production/cms/category/366e5b7d-2028-4935-b9f1-75bfa085c3d7.png"
+              alt="Sweet Cravings"
+            />
+            <p>Sweet Cravings</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.zeptonow.com/production/cms/category/db346f5e-644f-426a-85af-92d707e086ac.png"
+              alt="Sweet Cravings"
+            />
+            <p>Sweet Cravings</p>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.zeptonow.com/production/cms/category/3b0ce887-3b38-4450-b7da-9da0ad8b799d.png"
+              alt="Sweet Cravings"
+            />
+            <p>Sweet Cravings</p>
+          </div>
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Example: Paan Corner Section -->
+    <section class="paan-corner">
+      <h2>Paan Corner</h2>
+      <div class="banner">
+        <img
+          src="https://cdn.zeptonow.com/production/tr:w-1280,ar-9600-1887,pr-true,f-auto,q-80/inventory/banner/42aa0b53-0a9e-46e5-8aa6-41448fc4643b.png"
+          alt="Paan Corner Banner"
+        />
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Left Section -->
+      <section class="sonic">
+        <h2>Super Sonic Deals</h2>
+        <p>UP TO 90% OFF</p>
+        <div class="carousel">
+          <button class="arrow left" onclick="moveSlide('sonic', -1)">
+            &#10094;
+          </button>
+          <div class="carousel-track sonic-track">
+            <div class="card">
+              <img
+                src="https://cdn.zeptonow.com/production/inventory/banner/36d0d504-7398-4f6a-9473-8249ff4b90c6.png"
+                alt=""
+              />
+              <p>Audio Gear</p>
+              <p class="discount">UP TO 90% OFF</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://cdn.zeptonow.com/production/inventory/banner/e9f6da42-bdc8-4bec-b0b6-b7451d8e1ad3.png"
+                alt=""
+              />
+              <p>Home & Kitchen</p>
+              <p class="discount">UP TO 80% OFF</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://cdn.zeptonow.com/production/inventory/banner/65de6aab-ae30-48a1-a9da-db46b482630f.png"
+                alt=""
+              />
+              <p>Tech Accessories</p>
+              <p class="discount">UP TO 75% OFF</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://cdn.zeptonow.com/production/inventory/banner/eea6c8e6-cce7-4808-a32d-b38faf494b99.png"
+                alt=""
+              />
+              <p>Charging Needs</p>
+              <p class="discount">UP TO 80% OFF</p>
+            </div>
+          </div>
+          <button class="arrow right" onclick="moveSlide('sonic', 1)">
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <!-- Right Section -->
+      <section class="beauty">
+        <h2>Beauty LIT Fest</h2>
+        <p>UP TO 60% OFF</p>
+        <div class="carousel">
+          <button class="arrow left" onclick="moveSlide('beauty', -1)">
+            &#10094;
+          </button>
+          <div class="carousel-track beauty-track">
+            <div class="card">
+              <img
+                src="https://cdn.zeptonow.com/production/inventory/banner/10c23ba4-03c4-4986-9206-f2024b826284.png"
+                alt=""
+              />
+              <p>Luscious Lips</p>
+              <p class="discount">UP TO 40% OFF</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://cdn.zeptonow.com/production/inventory/banner/245d5797-cc01-4121-8e46-33b7f3d51e61.png"
+                alt=""
+              />
+              <p>Flawless Face</p>
+              <p class="discount">UP TO 45% OFF</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://cdn.zeptonow.com/production/inventory/banner/a7a2a5a9-90c8-4ec3-bd7c-250351d8acb1.png"
+                alt=""
+              />
+              <p>Dazzling Eyes</p>
+              <p class="discount">UP TO 60% OFF</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://cdn.zeptonow.com/production/inventory/banner/9538cabc-4243-4841-99a7-176b1773a84f.png"
+                alt=""
+              />
+              <p>Korean Beauty</p>
+              <p class="discount">UP TO 60% OFF</p>
+            </div>
+          </div>
+          <button class="arrow right" onclick="moveSlide('beauty', 1)">
+            &#10095;
+          </button>
+        </div>
+      </section>
+    </div>
+<section class="coffee-section">
+  <div class="coffee-left">
+    <h4>COFFEE LOVERS</h4>
+    <h2>Dive into the world of fresh brew</h2>
+    <button class="more-btn">More Items ➜</button>
+  </div>
+
+  <div class="coffee-carousel">
+    <button class="coffee-btn coffee-prev">&#10094;</button>
+
+    <div class="coffee-track">
+      <div class="coffee-card">
+        <img src="https://cdn.zeptonow.com/production/inventory/banner/36d0d504-7398-4f6a-9473-8249ff4b90c6.png" alt="">
+        <p class="price">₹129 <span class="strike">₹319</span> <span class="save">SAVE ₹190</span></p>
+        <p class="detail">250 ml</p>
+        <h4>Hot Americano</h4>
+        <p class="rating">⭐ 4.2 (934)</p>
+        <button class="add-btn">ADD</button>
+      </div>
+
+      <div class="coffee-card">
+        <img src="https://cdn.zeptonow.com/production/inventory/banner/e9f6da42-bdc8-4bec-b0b6-b7451d8e1ad3.png" alt="">
+        <p class="price">₹149 <span class="strike">₹319</span> <span class="save">SAVE ₹170</span></p>
+        <p class="detail">250 ml</p>
+        <h4>Cappuccino</h4>
+        <p class="rating">⭐ 3.9 (2.4k)</p>
+        <button class="add-btn">ADD</button>
+      </div>
+
+       <div class="coffee-card">
+        <img src="https://cdn.zeptonow.com/production/inventory/banner/eea6c8e6-cce7-4808-a32d-b38faf494b99.png" alt="">
+        <p class="price">₹169 <span class="strike">₹539</span> <span class="save">SAVE ₹370</span></p>
+        <p class="detail">350 ml</p>
+        <h4>Spanish Coffee</h4>
+        <p class="rating">⭐ 4.1 (9.6k)</p>
+        <button class="add-btn">ADD</button>
+      </div>
+    </div>
+  </section>
+    
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
