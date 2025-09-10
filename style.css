@@ -476,3 +476,245 @@ section {
     border-color: #2980b9;
     box-shadow: 0 0 8px rgba(41, 128, 185, 0.7);
   }
+  /* Section */
+.section {
+  margin: 50px 0;
+  /* padding: 0 5%; */
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ee3d3d;
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  gap: 24px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+/* Hide scrollbar */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Carousel Item Card */
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px; /* card width */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.carousel-item p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  margin: 0;
+}
+
+/* Hover Effects */
+.carousel-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: background 0.3s ease;
+}
+
+.carousel-control:hover {
+  background: #f1f1f1;
+}
+
+.carousel-control.prev {
+  left: 15px;
+}
+
+.carousel-control.next {
+  right: 15px;
+}
+
+/* =====================
+   RESPONSIVENESS
+===================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .carousel-item {
+    width: 170px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .carousel {
+    gap: 16px;
+  }
+  .carousel-item {
+    width: 140px;
+    padding: 15px 10px;
+  }
+  .carousel-item img {
+    height: 100px;
+  }
+  .section-title {
+    font-size: 22px;
+  }
+}
+/* Snacks & Drinks Section */
+.snacks-section {
+  margin: 50px 0;
+  
+}
+
+.snacks-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #f13131;
+}
+
+/* Carousel Wrapper */
+.snacks-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.snacks-carousel {
+  display: flex;
+  gap: 24px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+/* Hide scrollbar */
+.snacks-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Item Card */
+.snacks-item {
+  flex: 0 0 auto;
+  width: 200px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.snacks-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.snacks-item p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  margin: 0;
+}
+
+/* Hover */
+.snacks-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Controls */
+.snacks-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: background 0.3s ease;
+}
+
+.snacks-control:hover {
+  background: #f1f1f1;
+}
+
+.snacks-prev {
+  left: 15px;
+}
+
+.snacks-next {
+  right: 15px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .snacks-item {
+    width: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .snacks-carousel {
+    gap: 16px;
+  }
+  .snacks-item {
+    width: 140px;
+    padding: 15px 10px;
+  }
+  .snacks-item img {
+    height: 100px;
+  }
+  .snacks-title {
+    font-size: 22px;
+  }
+}
+/* Hide carousel buttons for Snacks & Drinks */
+.snacks-control {
+  display: none !important;
+}
+
+/* Hide carousel buttons for Grocery & Kitchen */
+.carousel-control {
+  display: none !important;
+}
