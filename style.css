@@ -718,3 +718,133 @@ section {
 .carousel-control {
   display: none !important;
 }
+/* Section */
+.party-section {
+  margin: 50px 0;
+}
+
+.party-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.party-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e72525;
+}
+
+.party-see-all {
+  color: #e91e63;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Carousel layout */
+.party-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.party-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Product Card */
+.party-item {
+  flex: 0 0 auto;
+  width: 180px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.party-img {
+  position: relative;
+  text-align: center;
+}
+
+.party-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.party-add-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: #fff;
+  border: 1px solid #e91e63;
+  color: #e91e63;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Price Section */
+.party-price {
+  margin-top: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.party-price .price {
+  font-weight: 700;
+  color: #222;
+}
+
+.party-price .mrp {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 13px;
+}
+
+.party-price .save {
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Quantity + Name */
+.party-qty {
+  font-size: 13px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.party-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 2px 0 6px 0;
+}
+
+/* Rating */
+.party-rating {
+  font-size: 13px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating-badge {
+  background: #2e7d32;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}
